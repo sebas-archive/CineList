@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="CineList · Lista personal de películas">
+  <rect width="1280" height="320" fill="#F7F5F0"/>
+  <!-- Tira de película decorativa -->
+  <g opacity="0.12" fill="#1D1B18">
+    <rect x="0" y="22" width="1280" height="10" />
+    <rect x="0" y="288" width="1280" height="10" />
+    <rect x="10" y="6" width="14" height="10" rx="2"/>
+    <rect x="40" y="6" width="14" height="10" rx="2"/>
+    <rect x="70" y="6" width="14" height="10" rx="2"/>
+  </g>
+  <g opacity="0.10" fill="#1D1B18">
+    <rect x="10" y="296" width="14" height="10" rx="2"/>
+    <rect x="40" y="296" width="14" height="10" rx="2"/>
+    <rect x="70" y="296" width="14" height="10" rx="2"/>
+  </g>
+  <!-- Logo: claqueta -->
+  <g transform="translate(300 80)">
+    <rect x="0" y="50" width="200" height="110" rx="14" fill="#B4532A"/>
+    <rect x="20" y="95" width="160" height="44" rx="6" fill="#F7F5F0"/>
+    <g transform="rotate(-14 0 50)">
+      <rect x="0" y="10" width="200" height="40" rx="10" fill="#B4532A"/>
+      <path d="M30 10 H56 L34 50 H8 Z" fill="#F7F5F0"/>
+      <path d="M78 10 H104 L82 50 H56 Z" fill="#F7F5F0"/>
+      <path d="M126 10 H152 L130 50 H104 Z" fill="#F7F5F0"/>
+      <path d="M174 10 H200 V50 H152 Z" fill="#F7F5F0"/>
+    </g>
+  </g>
+  <!-- Texto -->
+  <text x="536" y="150" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="700" font-size="96" fill="#1D1B18">CineList</text>
+  <text x="538" y="196" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" fill="#7A7368">Lista personal de películas</text>
+  <!-- Etiquetas -->
+  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="2" text-anchor="middle">
+    <rect x="538" y="222" width="116" height="34" rx="17" fill="#FFFFFF" stroke="#E6E1D8"/>
+    <text x="596" y="244" fill="#B4532A">ANDROID</text>
+    <rect x="666" y="222" width="82" height="34" rx="17" fill="#FFFFFF" stroke="#E6E1D8"/>
+    <text x="707" y="244" fill="#B4532A">WEB</text>
+    <rect x="760" y="222" width="150" height="34" rx="17" fill="#FFFFFF" stroke="#E6E1D8"/>
+    <text x="835" y="244" fill="#7A7368">FIRESTORE</text>
+  </g>
+</svg>

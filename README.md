@@ -1,30 +1,29 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/banner-dark.svg">
+  <img alt="CineList · Lista personal de películas" src="docs/img/banner-light.svg">
+</picture>
+
 # CineList
+
+*Lista personal de películas para Android (.NET MAUI) y web (Blazor WebAssembly), sincronizada con Firebase Firestore.*
+
+![.NET 9](https://img.shields.io/badge/.NET-9-512BD4?logo=dotnet&logoColor=white) ![Android](https://img.shields.io/badge/Android-API_21+-3DDC84?logo=android&logoColor=white) ![Blazor](https://img.shields.io/badge/Blazor-WebAssembly-512BD4?logo=blazor&logoColor=white) ![Firestore](https://img.shields.io/badge/Firebase-Firestore-FFCA28?logo=firebase&logoColor=black) ![Pruebas](https://img.shields.io/badge/pruebas-132_xUnit-2EA44F) ![Estado](https://img.shields.io/badge/estado-funcionando-brightgreen)
+
+**[Descripción general](#descripción-general) · [Características](#características) · [Tecnologías](#tecnologías) · [Arquitectura](#arquitectura) · [Inicio rápido](#inicio-rápido) · [Firebase](#firebase) · [Pruebas](#pruebas) · [Evidencias](#evidencias-de-la-guía-8) · [Publicación](#publicación)**
+
+[Repositorio](https://github.com/sebas-archive/Multiplatform-app-ListView) · [Consola de Firebase](https://console.firebase.google.com/project/cinelist-7a4de)
+
+</div>
+
+## Descripción general
 
 Aplicación multiplataforma para administrar una lista personal de películas. La app de Android está hecha con **.NET MAUI 9** y la versión web con **Blazor WebAssembly**; ambas comparten la lógica de `CineList.Core` y guardan los datos en **Firebase Firestore**.
 
 Proyecto de la **Guía 8, «Trabajo con ListView»**, de Computación móvil (Universidad Manuela Beltrán). El requisito central es un `ListView` agrupado por género con celdas personalizadas (`ViewCell`) y un evento de selección que abre el detalle.
 
 **Estado:** app Android y web funcionando; **132 pruebas unitarias** pasando.
-
-## Contenido
-
-- [Qué es](#qué-es)
-- [Características](#características)
-- [Tecnologías](#tecnologías)
-- [Estructura del repositorio](#estructura-del-repositorio)
-- [Requisitos](#requisitos)
-- [Inicio rápido](#inicio-rápido)
-  - [Web](#web)
-  - [Android](#android)
-  - [Pruebas](#pruebas)
-- [Arquitectura](#arquitectura)
-- [Firebase](#firebase)
-- [Evidencias de la Guía 8](#evidencias-de-la-guía-8)
-- [Publicación](#publicación)
-- [Limitaciones y notas](#limitaciones-y-notas)
-- [Contexto académico](#contexto-académico)
-
-## Qué es
 
 CineList permite registrar películas con título, director, género, año, duración, sinopsis, estado (vista o pendiente), calificación y póster. La lista se agrupa por género y se puede buscar, filtrar y ordenar; cada fila abre una pantalla de detalle desde la que se puede editar, cambiar de estado o eliminar.
 
@@ -267,7 +266,8 @@ service cloud.firestore {
 }
 ```
 
-> **Advertencia:** estas reglas son aceptables solo para un proyecto académico. Cualquier persona con la API key puede leer y modificar la colección `movies`. Para un uso real hay que activar autenticación (por ejemplo, anónima) y restringir las reglas por usuario.
+> [!WARNING]
+> Estas reglas son aceptables solo para un proyecto académico. Cualquier persona con la API key puede leer y modificar la colección `movies`. Para un uso real hay que activar autenticación (por ejemplo, anónima) y restringir las reglas por usuario.
 
 Los pósters se guardan como JPEG en base64 dentro del documento (lado mayor 600 px, calidad 70, máximo 900 000 caracteres). Puedes ver los datos en la [consola de Firebase](https://console.firebase.google.com/) → proyecto `cinelist-7a4de` → *Firestore Database* → colección `movies`.
 
